@@ -24,10 +24,10 @@
                   <p><%= post_image.caption %></p>
                   <ul class="inline-meta">
                     <li>By
-                      <%= post_image.user.name %>
+                        <%= post_image.user.name %>
                     </li>
                     <li>
-                    <a href="#">23 コメント</a>
+                        <%= link_to "#{post_image.post_comments.count} コメント", post_image_path(post_image.id) %>
                     </li>
                   </ul>
                 </div>
