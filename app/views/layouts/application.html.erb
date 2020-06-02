@@ -3,7 +3,7 @@
   <head>
     <%= csrf_meta_tags %>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -39,8 +39,7 @@
                   <%= link_to '投稿フォーム', new_post_image_path %>
                 </li>
                 <li class="">
-                  <!-- ↓以下のコードは、5章で正しいroutingに書き直します。 -->
-                  <%= link_to 'マイページ', "#" %>
+                  <%= link_to 'マイページ', user_path(current_user.id) %>
                 </li>
               <% else %>
                 <li class="">
